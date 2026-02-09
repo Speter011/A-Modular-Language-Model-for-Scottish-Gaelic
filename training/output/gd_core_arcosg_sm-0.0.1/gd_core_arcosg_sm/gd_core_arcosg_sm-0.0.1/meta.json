@@ -1,20 +1,19 @@
 {
   "lang":"gd",
-  "name":"core_arcosg",
-  "version":"0.0.0",
-  "spacy_version":">=3.8.11,<3.9.0",
-  "description":"",
+  "name":"core_arcosg_sm",
+  "version":"0.0.1",
+  "description":"Custom Scottish Gaelic pipeline (ARCOSG)",
   "author":"",
   "email":"",
   "url":"",
   "license":"",
+  "spacy_version":">=3.8.11,<3.9.0",
   "spacy_git_version":"e7a662a",
   "vectors":{
     "width":0,
     "vectors":0,
     "keys":0,
-    "name":null,
-    "mode":"default"
+    "name":null
   },
   "labels":{
     "tok2vec":[
@@ -257,5 +256,8 @@
     "tag_micro_f":0.0,
     "tok2vec_loss":1743.2987281084,
     "tagger_loss":10291.496119976
-  }
+  },
+  "requirements":[
+
+  ]
 }

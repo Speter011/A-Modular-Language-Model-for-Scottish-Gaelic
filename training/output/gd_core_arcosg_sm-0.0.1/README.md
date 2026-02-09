@@ -1,0 +1,37 @@
+Custom Scottish Gaelic pipeline (ARCOSG)
+
+| Feature | Description |
+| --- | --- |
+| **Name** | `gd_core_arcosg_sm` |
+| **Version** | `0.0.1` |
+| **spaCy** | `>=3.8.11,<3.9.0` |
+| **Default Pipeline** | `tok2vec`, `tagger` |
+| **Components** | `tok2vec`, `tagger` |
+| **Vectors** | 0 keys, 0 unique vectors (0 dimensions) |
+| **Sources** | n/a |
+| **License** | n/a |
+| **Author** | [n/a]() |
+
+### Label Scheme
+
+<details>
+
+<summary>View label scheme (215 labels for 1 components)</summary>
+
+| Component | Labels |
+| --- | --- |
+| **`tagger`** | `AP`, `APC`, `APS`, `AQ`, `AQ-DFN`, `AQ-P`, `AQ-PFD`, `AQ-PFG`, `AQ-PFN`, `AQ-PMD`, `AQ-PMG`, `AQ-PMN`, `AQ-S`, `AQ-SFD`, `AQ-SFG`, `AQ-SFN`, `AQ-SMD`, `AQ-SMG`, `AQ-SMN`, `AQ-SMV`, `AR`, `AV`, `CC`, `CS`, `CS+QQ`, `CSW`, `DD`, `DP1P`, `DP1S`, `DP2P`, `DP2S`, `DP3P`, `DP3SF`, `DP3SM`, `DQ`, `FB`, `FE`, `FG`, `FI`, `FQ`, `FU`, `FZ`, `I`, `MC`, `MN`, `MO`, `NCDFN`, `NCPFD`, `NCPFG`, `NCPFN`, `NCPMD`, `NCPMG`, `NCPMN`, `NCPMNE`, `NCPMV`, `NCSFD`, `NCSFDE`, `NCSFG`, `NCSFGE`, `NCSFN`, `NCSFN+PR1S`, `NCSFNE`, `NCSMD`, `NCSMDE`, `NCSMG`, `NCSMGE`, `NCSMN`, `NCSMN+PR1S`, `NCSMNE`, `NCSMV`, `NF`, `NF---E`, `NN`, `NN-FD`, `NN-FG`, `NN-FN`, `NN-FV`, `NN-MD`, `NN-MG`, `NN-MN`, `NN-MV`, `NT`, `NV`, `NV---E`, `PD`, `PN`, `PP1P`, `PP1P--E`, `PP1S`, `PP1S--E`, `PP2P`, `PP2P--E`, `PP2S`, `PP2S--E`, `PP3P`, `PP3P--E`, `PP3SF`, `PP3SF-E`, `PP3SM`, `PP3SM-E`, `PR1P`, `PR1P--E`, `PR1S`, `PR1S--E`, `PR2P`, `PR2P--E`, `PR2S`, `PR2S--E`, `PR3P`, `PR3P--E`, `PR3SF`, `PR3SF-E`, `PR3SM`, `PR3SM-E`, `PX`, `Q--S`, `Q-R`, `Q-S`, `QA`, `QA+Q--S`, `QN`, `QNM`, `QNR`, `QQ`, `QQ+Q--S`, `RG`, `RG+CC`, `RS`, `RT`, `SA`, `SAP1P`, `SAP1S`, `SAP3P`, `SAP3SF`, `SAP3SM`, `SP`, `SP+DP2S`, `SP+Q-R`, `SPA-P`, `SPA-S`, `SPP1P`, `SPP1S`, `SPP2P`, `SPP2S`, `SPP3P`, `SPP3SF`, `SPP3SM`, `SPV`, `TDP`, `TDP-G`, `TDPF`, `TDPFG`, `TDPM`, `TDPMG`, `TDS`, `TDS-G`, `TDSF`, `TDSFG`, `TDSM`, `TDSMG`, `UA`, `UC`, `UF`, `UG`, `UM`, `UO`, `UP`, `UQ`, `UQ+V-P--D`, `UV`, `V-F`, `V-F--D`, `V-F--R`, `V-F0`, `V-F0-D`, `V-H`, `V-H--D`, `V-H0`, `V-H0-D`, `V-H1P`, `V-H1PD`, `V-H1S`, `V-H1S-E`, `V-H1SD`, `V-H1SDE`, `V-P`, `V-P--D`, `V-P0`, `V-S`, `V-S--D`, `V-S0`, `V-S0-D`, `VM-1P`, `VM-2P`, `VM-2S`, `VM-3`, `WP-I`, `WP-I-3`, `WP-I-X`, `WP-IN`, `WPDIA`, `WPDIN`, `WPDQA`, `WPDQN`, `WPR`, `WS`, `XA`, `XF`, `XFE`, `XSC`, `XSI`, `XSP`, `XX`, `XY`, `Y` |
+
+</details>
+
+### Accuracy
+
+| Type | Score |
+| --- | --- |
+| `TAG_ACC` | 88.17 |
+| `POS_ACC` | 0.00 |
+| `TAG_MICRO_P` | 0.00 |
+| `TAG_MICRO_R` | 0.00 |
+| `TAG_MICRO_F` | 0.00 |
+| `TOK2VEC_LOSS` | 174329.87 |
+| `TAGGER_LOSS` | 1029149.61 |

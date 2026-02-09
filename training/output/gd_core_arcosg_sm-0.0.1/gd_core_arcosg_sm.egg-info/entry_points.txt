@@ -1,0 +1,2 @@
+[spacy_models]
+gd_core_arcosg_sm = gd_core_arcosg_sm
