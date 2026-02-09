@@ -26,21 +26,37 @@ with open(map_file, "r", encoding="utf-8") as f:
         pos_map[key] = value
 
 
+# use a new blank model for Gaelic
 nlp = spacy.blank("gd")
 vocab = nlp.vocab
 
+
 def parse_arcosg_file(path):
+    """Parse the file given. 
+    Convert it to doc(vocab, words, spaces, tags, pos, sent_starts) format.
+
+    Args:
+        path(str): File path to raw, but annotated data.
+
+    Returns:
+        Doc: doc formatted data to be used for training and testing in spaCy models.
+    """
+    
     with open(path, "r", encoding="utf-8") as f:
         text = f.read()
     
+    # remove undescores, capitalize all pos tags
     words = [re.sub("_", " ", w) for w in re.findall(r"([^ \n]+?)/", text)]
     tags = [t.upper() for t in re.findall(r"/([^ \n]*)", text)]
+
+    # if a tag is not in the tagset replace with the default "X" for standardization
     pos = [pos_map.get(t, "X") for t in tags]
 
+    # throw error if the number of words and tags don't match
     if len(words) != len(tags):
         raise ValueError(f"Number of Words ({len(words)}) != number of tags ({len(tags)}) in {path.name}")
     
-    # spaces after token
+    # spaces after token (Fq and Fz are opening and closing quotation marks)
     spaces = []
     for i, word in enumerate(words):
         space = True
@@ -64,7 +80,7 @@ def parse_arcosg_file(path):
         else:
             sent_starts.append(False)
 
-    # Remove speaker designations
+    # Remove speaker designations (Xsc tag refers to a speaker in transcripts such as [1] indicating the first speaker)
     for i in range(len(words)-1, -1, -1):
         if tags[i] == "Xsc":
             words.pop(i)
@@ -97,7 +113,7 @@ print(f"Total documents: {len(docs)}")
 random.seed(10)
 random.shuffle(docs)
 
-# Split
+# Split sets
 train = 0.8
 dev = 0.1
 test = 0.1
