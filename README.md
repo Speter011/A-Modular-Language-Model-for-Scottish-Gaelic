@@ -1,6 +1,7 @@
 This repository contains my initial tests using the spaCy library to create a Part of Speech tagger for Scottish Gaelic using the ARCOSG (Annotated Reference Corpus of Scottish Gaelic) database.
 
 Several scripts have been implemented to make training, testing, and packaging models easier and sami-automated. This will make future testing much quicker.
+
 >**Note! All below scripts must be run from the `scripts` folder to avoid path issues.**
 
 1. `convert_to_spacy.py` must be ran first. This converts the raw data to the `.spacy` format. It also implements some standardisation to the tokenization and some changes are made to the tagmap (`data/raw/gd-parole.map`) as well for better tag accuracy. Change directories at the beggining of the file to test different datasets.
