@@ -3,11 +3,16 @@ from pathlib import Path
 
 # Paths
 
-config_path = Path("../config.cfg")
-output_dir = Path("../training/output")
-train_file = Path("../data/processed/train.spacy")
-dev_file = Path("../data/processed/dev.spacy")
-test_file = Path("../data/processed/test.spacy")
+#config_path = Path("../config.cfg")
+config_path = Path("../config_coarse.cfg")
+#output_dir = Path("../training/output")
+output_dir = Path("../training/output_coarse")
+#train_file = Path("../data/processed/train.spacy")
+#dev_file = Path("../data/processed/dev.spacy")
+#test_file = Path("../data/processed/test.spacy")
+train_file = Path("../data/processed_small_tagset/train.spacy")
+dev_file = Path("../data/processed_small_tagset/dev.spacy")
+test_file = Path("../data/processed_small_tagset/test.spacy")
 
 output_dir.mkdir(exist_ok = True)
 
@@ -23,7 +28,7 @@ train(
     }
 )
 
-print(f"Training finihsed. Model saved in {output_dir / 'model-best'}")
+print(f"Training finihsed. Model saved in {output_dir / 'model-best'}")    
 
 
 # load and test model

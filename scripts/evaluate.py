@@ -6,9 +6,12 @@ import json
 from pathlib import Path
 
 # Paths
-model_path = Path("../training/output/model-best")
-test_file = Path("../data/processed/test.spacy")
-output_json = Path("../results/evaluation_metrics.json")
+#model_path = Path("../training/output_coarse/model-best")
+model_path = Path("../training/output_coarse/model-best")
+#test_file = Path("../data/processed/test.spacy")
+test_file = Path("../data/processed_small_tagset/test.spacy")
+#output_json = Path("../results/evaluation_metrics.json")
+output_json = Path("../results/coarse_evaluation_metrics.json")
 
 # load model
 nlp = spacy.load(model_path)

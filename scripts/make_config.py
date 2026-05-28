@@ -4,11 +4,11 @@ from pathlib import Path
 
 
 # Paths
-config_path = Path("../config.cfg")
+config_path = Path("../config_coarse.cfg")     #changed from "../config.cfg"
 if config_path.exists():
     config_path.unlink()
 
-# Create the config
+# Config changes
 cfg = init_config(lang = "gd", pipeline=["tagger"])
 
 # save
