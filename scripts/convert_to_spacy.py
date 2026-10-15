@@ -193,3 +193,19 @@ print(f"Saved train/dev/test splits to {out_dir}")
 print(f"Train split:{train:.0%}")
 print(f"Dev split:{dev:.0%}")
 print(f"Test split:{1 - train - dev:.0%}")
+
+# CREATE SMALLER TRAINING SETS
+# Each subset is taken from the original training set
+# Smaller subsets are contained within larger subsets
+
+train_sizes=[0.10, 0.20, 0.50, 0.75, 1.00]
+
+for proportion in train_sizes:
+    n_subset =int(len(train_docs) * proportion)
+    subset = train_docs[:n_subset]
+
+    # set train name according to size and save files
+    filename =f"train_{int(proportion * 100)}.spacy"
+    DocBin(docs=subset).to_disk(out_dir/filename)
+
+    print(f"Saved {filename}: {len(subset)} documents")

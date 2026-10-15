@@ -5,9 +5,15 @@ from pathlib import Path
 
 # paths for trained model
 # output for: packaged model, name and version
-model_path = Path("../training/output/model-best")
-output_path = Path("../training/output/")
-package_name = "core_arcosg_sm"
+## fine-grained model
+#model_path = Path("../training/output/model-best")
+#output_path = Path("../training/output/")
+#package_name = "core_arcosg_sm"
+
+## coarse model
+model_path = Path("../training/output_coarse/model-best")
+output_path = Path("../training/output_coarse/")
+package_name = "core_arcosg_coarse_sm"
 package_version = "0.0.1"
 lang_code = "gd"
 
